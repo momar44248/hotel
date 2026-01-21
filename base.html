@@ -1,0 +1,26 @@
+<!-- Chambres -->
+<section id="chambres">
+    <h2>Nos Chambres</h2>
+    <div class="menu-items">
+      <!-- Boucle sur la liste 'rooms' passée depuis app.py -->
+      {% for room in rooms %}
+      <div class="menu-item">
+        <!-- Ici, vous devrez ajouter la logique pour lier l'image correcte -->
+        <img src="encrypted-tbn0.gstatic.com" alt="Suite Deluxe">
+        <p>
+            <!-- Accédez aux données en utilisant les clés du dictionnaire -->
+            <strong>Chambre {{ room['room_num'] }}</strong><br>
+            Statut: {{ room['status'] }}
+        </p>
+      </div>
+      {% endfor %}
+      
+      <!-- L'exemple statique ci-dessous peut être supprimé une fois la boucle fonctionnelle -->
+      <!--
+      <div class="menu-item">
+        <img src="data:image/jpeg;base64..." alt="Chambre Standard">
+        <p><strong>Chambre Standard</strong><br>50 000 FCFA / nuit</p>
+      </div>
+      -->
+    </div>
+</section>
